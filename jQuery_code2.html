@@ -3,8 +3,7 @@
 <head> 
 	<meta charset="utf-8" />
 	<title>TP jQuery - Code2</title>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- jQuery est inclus ! --> 
-	<!-- styles -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>	<!-- styles -->
 	<style> 
 		a,a:link {	color:#447BC4;	text-decoration:underline;	font-weight:inherit;}
 		a:hover {	color:#DD4B39;	text-decoration:underline;}
@@ -21,8 +20,98 @@
 </head> 
 <body>
 	<div id="donnees">
+		<!-- ULYSSE -->
 		<a id="lien1" href="#">ULYSSE</a><br/>
 		<table id="eleve1">
+			<thead>
+				<tr>
+					<th id="">Matière</th><th id="">Semestre 1</th>	<th id="">Semestre 2</th><th id="">Année</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr id="">
+					<td >Maths</td>
+					<td >15,50</td>
+					<td >09,50</td>
+					<td >12,50</td>
+				</tr>
+				<tr id="">
+					<td >Anglais</td>
+					<td ></td>
+					<td >11,00</td>
+					<td >11,00</td>
+				</tr>
+				<tr id="">
+					<td >Français</td>
+					<td >12,00</td>
+					<td >14,50</td>
+					<td >13,25</td>
+				</tr>
+				<tr id="">
+					<td >Histoire-Geo</td>
+					<td >08,50</td>
+					<td ></td>
+					<td >08,50</td>
+				</tr>
+				<tr id="">
+					<td>Moyenne</td>
+					<td >12,00</td>
+					<td >11,67</td>
+					<td >11,83</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- ACHILLE -->
+		<a id="lien2" href="#">ACHILLE</a><br/>
+		<table id="eleve2">
+			<thead>
+				<tr>
+					<th id="">Matière</th><th id="">Semestre 1</th>	<th id="">Semestre 2</th><th id="">Année</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr id="">
+					<td >Maths</td>
+					<td >11,00</td>
+					<td >07,50</td>
+					<td >09,25</td>
+				</tr>
+				<tr id="">
+					<td >Anglais</td>
+					<td >17,00</td>
+					<td >15,00</td>
+					<td >16,00</td>
+				</tr>
+				<tr id="">
+					<td >Français</td>
+					<td ></td>
+					<td >08,00</td>
+					<td >08,00</td>
+				</tr>
+				<tr id="">
+					<td >Histoire-Geo</td>
+					<td >11,00</td>
+					<td >06,50</td>
+					<td >08,75</td>
+				</tr>
+				<tr id="">
+					<td >SVT</td>
+					<td >14,00</td>
+					<td >06,50</td>
+					<td >08,75</td>
+				</tr>
+				<tr id="">
+					<td>Moyenne</td>
+					<td >12,00</td>
+					<td >11,67</td>
+					<td >11,83</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- HECTOR -->
+		<a id="lien3" href="#">HECTOR</a><br/>
+		<table id="eleve3">
 			<thead>
 				<tr>
 					<th id="">Matière</th><th id="">Semestre 1</th>	<th id="">Semestre 2</th><th id="">Année</th>
@@ -64,8 +153,17 @@
 	</div>
 	<!-- script jQuery -->
 	<script>
-		$(document).ready(function(){ 
-			// code jQuery
+		$(document).ready(function(){
+			//couleur du fond de l'entete en bleu
+			$("th").css("background","#9cf");
+			//couleur des lignes impaires en gris
+			$("tr:odd").css("background","#e8e8e8");
+			//couleur du fond de la derniere ligne en jaune
+			$("tr:last").css("background", "#FBEC88");
+			//premiere colonne en gris, gras et aligné à droite
+			$("tr > td:not(td~td)").css("color","#555555");
+			$("tr > td:not(td~td)").css("text-align", "right");
+			$("tr > td:not(td~td)").css("font-weight", "bold");
 		});
 	</script>
 </body> 
