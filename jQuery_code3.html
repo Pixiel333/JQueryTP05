@@ -1,0 +1,55 @@
+<!doctype html> 
+<html lang="fr"> 
+<head> 
+	<meta charset="utf-8"> 
+	<title>jQuery Formulaire</title> 
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- jQuery est inclus ! --> 
+	<!-- styles --> 
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	
+</head> 
+<body> 
+	<h1>Formulaire de demande de brochures</h1>
+	<div id="colonne1">
+		<p class="p1">Qui êtes-vous ?</p>
+		<p class="p2">Quelle(s) brochures souhaitez-vous recevoir ?</p>
+		<p class="p3">Comment souhaitez-vous recevoir les brochures ?</p>
+	</div>
+	<div id="colonne2">
+			<br/>
+			<p class="p1">
+				Nom* : <input id="nom" type="text" value=""> Prénom* : <input id="prenom" type="text" value="">
+			</p>
+			<p class="p2">
+				<input type="checkbox" name="brochure" value="Le guide des activités en été" >Le guide des activités en été<br> 
+				<input type="checkbox" name="brochure" value="Le guide des activités en hiver">Le guide des activités en hiver<br> 
+				<input type="checkbox" name="brochure" value="Le guide des hébergements">Le guide des hébergements<br> 
+				<input type="checkbox" name="brochure" value="Le guide du VTT">Le guide du VTT<br>
+				<input type="checkbox" name="brochure" value="Le guide des randonnées" >Le guide des randonnées<br>
+				<input type="checkbox" id="tous" ><b>Sélectionner tout</b> <br />
+			</p>	
+			<p class="p3">
+				<input value="mail" type="radio" name="mode" > Par mail
+				<input value="poste" type="radio" name="mode" > Par courrier
+				<p id="cadreAdresse" style="display:none">
+					Rue*  : <input id="rue" type="text" value="" size="70"><br/>
+					Code Postal* : <input id="cp" type="text" value="" size="7">
+					Ville* : <input id="ville" type="text" value="" size="40">
+				</p>
+				<p id="cadreMail" style="display:none">
+					Adresse mail* : <input id="mail" type="text" value="">
+				</p>
+			</p>	
+			<p class="p4">
+				<input class="bouton" type="button" value="Effacer" id="boutonEffacer">
+				<input class="bouton" type="button" value="Envoyer votre demande" id="boutonEnvoi"><br> 
+			</p>
+		
+	</div>
+	<script> 
+		$(document).ready(function() { 
+			
+		});
+	</script> 
+</body> 
+</html>
